@@ -1,0 +1,12 @@
+//Script to create a new catalog request, used with scheduled jobs to automatically create the request on a monthly basis.
+
+(function(){  
+  var cart = new Cart();  
+  var item = cart.addItem("f5911534db2e7a0084ea72fc0f96196e");  
+//  cart.setVariable(item, "requested_for.name", "Edson Araujo"); 
+  cart.setVariable(item, "contact_type", "Self-Service"); 
+  cart.setVariable(item, "service_line_of_requested_for", "7501504adb116a0084ea72fc0f96196a");  
+	cart.setVariable(item, "short_description", "PolicyIQ Monthly Request");
+  cart.setVariable(item, "business_justification", "Analyze network services capacity and upload capacity report to PolicyIQ");  
+  cart.placeOrder();  
+})();  
